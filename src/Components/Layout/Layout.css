@@ -1,5 +1,5 @@
 :root {
-    --sidebar-width: 20%;
+    --sidebar-width: 15%;
     --header-height: 10vh;
     --cards-height: 20vh;
     --charts-height: 30vh;
@@ -25,7 +25,7 @@
 
 .header {
     grid-column: 2 / -1;
-color: var(--text-color);
+    color: var(--text-color);
     padding: 1rem;
     border: gray 1px solid;
 }
