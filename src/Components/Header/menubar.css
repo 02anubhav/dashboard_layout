@@ -1,0 +1,174 @@
+
+:root {
+  /* Color variables */
+  --dropdown-bg-primary: #060610;
+  --dropdown-bg-secondary: #121212;
+  --dropdown-bg-hover: #2a2a2a;
+  --dropdown-text-primary: #ffffff;
+  --dropdown-text-secondary: #b3b3b3;
+  --dropdown-border: #333333;
+  --dropdown-danger: #ff3b30;
+  --dropdown-avatar-bg: #3b82f6;
+ 
+}
+
+/* Dropdown Container */
+.dropdown-container {
+  position: relative;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Dropdown Toggle */
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  background-color: var(--dropdown-bg-primary);
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  color: var(--dropdown-text-primary);
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: auto;
+  border:1px solid #27272a;
+}
+
+.dropdown-toggle:hover {
+  background-color: var(--dropdown-bg-hover);
+}
+
+.dropdown-toggle-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Avatar */
+.dropdown-avatar {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 9999px;
+  overflow: hidden;
+  background-color: var(--dropdown-avatar-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dropdown-user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.dropdown-user-name {
+  font-weight: 600;
+  color: var(--dropdown-text-primary);
+}
+.dropdown-user-role {
+  font-size: 0.75rem;
+  color: var(--dropdown-text-secondary);
+}
+.dropdown-chevron {
+  color: var(--dropdown-text-secondary);
+}
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.5rem);
+
+  width: 12rem;
+
+  background-color: var(--dropdown-bg-secondary);
+  border-radius: 0.375rem;
+
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  padding-top: 0.25rem;
+
+  padding-bottom: 0.25rem;
+ 
+  z-index: 10;
+  animation: dropdownFadeIn 0.2s ease-out;
+}
+
+@keyframes dropdownFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.dropdown-header {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--dropdown-border);
+}
+
+.dropdown-header-text {
+  font-size: 0.875rem;
+  /* text-sm */
+  font-weight: 500;
+  /* font-medium */
+  color: var(--dropdown-text-primary);
+}
+
+/* Dropdown Item */
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  /* px-3 py-2 */
+  font-size: 0.875rem;
+  /* text-sm */
+  color: var(--dropdown-text-primary);
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.dropdown-item:hover {
+  background-color: var(--dropdown-bg-hover);
+  /* hover:bg-gray-800 */
+}
+
+.dropdown-item-icon {
+  width: 1.25rem;
+  /* w-5 */
+  height: 1.25rem;
+  /* h-5 */
+  margin-right: 0.5rem;
+  /* mr-2 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-item-label {
+  flex: 1;
+}
+
+/* Danger Item (Logout) */
+.dropdown-item-danger {
+  color: var(--dropdown-danger);
+}
+
+/* Dropdown Divider */
+.dropdown-divider {
+  height: 1px;
+  background-color: var(--dropdown-border);
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
