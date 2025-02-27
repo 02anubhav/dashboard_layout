@@ -1,0 +1,52 @@
+:root {
+    --sidebar-width: 20%;
+    --header-height: 10vh;
+    --cards-height: 20vh;
+    --charts-height: 30vh;
+    --last-section-height: 40vh;
+    --main-color:#060610;
+    --text-color:#fff;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) auto;
+    grid-template-rows: var(--header-height) var(--cards-height) var(--charts-height) var(--last-section-height);
+    height: 100vh;
+    background-color: var(--main-color);
+}
+
+.sidebar {
+    grid-row: 1 / 5;
+    color: var(--text-color);
+    padding: 1rem;
+    border: gray 1px solid;
+}
+
+.header {
+    grid-column: 2 / -1;
+color: var(--text-color);
+    padding: 1rem;
+    border: gray 1px solid;
+}
+
+.cards {
+    grid-column: 2 / -1;
+    padding: 1rem;
+    border: gray 1px solid;
+    color: var(--text-color);
+}
+
+.charts {
+    grid-column: 2 / -1;
+    padding: 1rem;
+    border: gray 1px solid;
+    color: var(--text-color);
+}
+
+.last-section {
+    grid-column: 2 / -1;
+    padding: 1rem;
+    border: gray 1px solid;
+    color: var(--text-color);
+}
